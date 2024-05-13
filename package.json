@@ -1,0 +1,25 @@
+{
+  "name": "reactbyakshay",
+  "version": "1.0.0",
+  "description": "This is react course",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Himanshuvaishy/ReactNotes.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Himanshu vaishy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Himanshuvaishy/ReactNotes/issues"
+  },
+  "homepage": "https://github.com/Himanshuvaishy/ReactNotes#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
