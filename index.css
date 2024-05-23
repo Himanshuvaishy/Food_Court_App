@@ -21,7 +21,8 @@
 
  .res-card {
       width:200px;
-      height: 300px;
+     
+     
      
       padding: 5px;
       margin: 15px;
@@ -36,6 +37,8 @@
   border: 1px solid black;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 2px 2px 8px;
+  transition: 0.5s ease-in;
 
  }
 
@@ -46,3 +49,4 @@
   width:100%;
   height: 140px;
 }
+
