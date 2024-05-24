@@ -23,7 +23,7 @@
       width:200px;
      
      
-     
+      border-radius: 5px;
       padding: 5px;
       margin: 15px;
  }
@@ -63,6 +63,30 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
+  }
+  .button-login {
+    padding: 0px 10px;
+    margin: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+  }
+  .button-login:hover{
+    color: blueviolet;
+    box-shadow: 2px 2px;
+  }
+
+  .search-btn {
+    margin:10px;
+    border-radius: 5px;
+    padding: 4px;
+    cursor: pointer;
+
+  }
+  .top-restaurent{
+    border-radius: 5px;
+    padding: 4px;
+    cursor: pointer;
   }
 
 
