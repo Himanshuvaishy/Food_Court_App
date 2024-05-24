@@ -1,9 +1,33 @@
 import RestaurantCard from "./RestaurantCard";
-import resList from "../utilis/mockData"; 
-import { useState } from "react";
+import Shimmer from "./Shimmer";
+
+
+import { useState,useEffect } from "react";
 const Body = () => {
     // Local storage Variable - super powerful variable
-    const [listOfRestaurants,setListOfRestaurant]=useState(resList);
+    const [listOfRestaurants,setListOfRestaurant]=useState([]);
+
+    useEffect(() => {
+      fetchData();
+    }, []);
+  
+    const fetchData = async () => {
+      const data = await fetch(
+        'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.624480699999999&page_type=DESKTOP_WEB_LISTING'
+
+      );
+  
+      const json = await data.json();
+      console.log(json);
+      console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+     setListOfRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+  
+      
+    }
+    if(listOfRestaurants.length===0){
+      return <Shimmer/>
+    }
+
     return (
       <div className="body">
         <div className="search-container">
@@ -11,7 +35,7 @@ const Body = () => {
           <button onClick={()=>{
             const filterList = listOfRestaurants.filter(
                 (res)=> {
-                    return res.data.avgRating > 4.3
+                    return res.info.avgRating > 4.3
                 }
             )
             setListOfRestaurant(filterList);
@@ -22,8 +46,8 @@ const Body = () => {
           {/* // * looping through the <RestaurentCard /> components Using Array.map() method */}
   
           {listOfRestaurants.map((restaurant) => (
-  
-            <RestaurantCard key={restaurant.data.id} resData={restaurant} />
+           
+            <RestaurantCard  key={restaurant?.info?.id} resData={restaurant} />
   
           ))}
   
