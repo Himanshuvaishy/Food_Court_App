@@ -11,7 +11,7 @@ const Body = () => {
 
     useEffect(() => {
       fetchData();
-    }, []);
+    },[]);
   
     const fetchData = async () => {
       const data = await fetch(
@@ -40,6 +40,7 @@ const Body = () => {
             setSearchText(e.target.value);
 
           }} />
+          
           <button className="search-btn" 
           onClick={()=>{
             const filteredRestaurent=listOfRestaurants.filter((res)=>
@@ -50,13 +51,15 @@ const Body = () => {
          
          
           }}>Search</button>
+
           <button className="top-restaurent" onClick={()=>{
+            console.log("button cliced top");
             const filterList = listOfRestaurants.filter(
                 (res)=> {
-                    return res.info.avgRating > 4.5
+                    return res.info.avgRating > 4.0
                 }
             )
-            setListOfRestaurant(filterList);
+          setFilterData(filterList);
           }}> Top Restaurant</button>
         </div>
         <div className="res-container">

@@ -2,28 +2,47 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
-// * not using keys (not acceptable) <<<< index as a key <<<<<<<<<< unique id (is the best  practice)
-const currYear = new Date().getFullYear();
+import About from "./components/About"
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
+import Error from "./components/Error";
+import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <p>
-        Copyright &copy; {currYear}, Made with 💗 by <strong>Himanshu_vaishy</strong>
-      </p>
-    </footer>
-  );
-};
+
 
 const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Body />
+      <Outlet/>
       <Footer />
     </div>
   );
 };
 
+const appRouter=createBrowserRouter([
+  {
+    path:"/",
+    element:<AppLayout/>,
+    children:[
+      {
+        path:"/",
+        element:<Body/>
+      },
+      
+      {
+        path:"/about",
+        element:<About/>
+      },
+      {
+        path:"/contact",
+        element:<Contact/> 
+      }
+    ],
+    errorElement:<Error/>
+  }
+  
+])
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppLayout />);
+root.render(<RouterProvider router={appRouter}/>);
