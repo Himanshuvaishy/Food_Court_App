@@ -1,8 +1,8 @@
 
-
+export const LOGO_URL ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZBLbGjAvdzDp-2FyXt80pN1T3JRU834Khug&usqp=CAU"
  export const CDN_URL = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/';
 
- export const LOGO_URL ="https://png.pngtree.com/png-vector/20230217/ourmid/pngtree-food-logo-design-for-restaurant-and-business-png-image_6604922.png";
+// export const LOGO_URL ="https://png.pngtree.com/png-vector/20230217/ourmid/pngtree-food-logo-design-for-restaurant-and-business-png-image_6604922.png";
 
 // export {CDN_URL,LOGO_URL} 
 
