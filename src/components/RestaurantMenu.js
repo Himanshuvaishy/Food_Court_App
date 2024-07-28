@@ -14,7 +14,7 @@ const RestaurantMenu = () => {
     const resInfo= useRestaurantMenu(resId);
     //console.log(resInfo);
 
-const [showIndex,setShowIndex]=useState(0);
+const [showIndex,setShowIndex]=useState(null);
 
    
 
@@ -25,7 +25,7 @@ const [showIndex,setShowIndex]=useState(0);
         // console.log(name);
    //     console.log(resInfo);
 
-    const {itemCards}=(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card);
+   // const {itemCards}=(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card);
        
    // console.log(resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);//console.log(itemCards);
 

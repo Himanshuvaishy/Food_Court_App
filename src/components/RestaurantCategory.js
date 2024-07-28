@@ -18,7 +18,7 @@ const RestaurantCategory = ({ data ,showItems, setShowIndex,currentindex,index})
                { showItems   &&<ItemList items={data.itemCards} />}
             </div>
         </div>
-    );
+    ); 
 }
 
 

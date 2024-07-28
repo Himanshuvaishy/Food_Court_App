@@ -15,7 +15,7 @@ import { addItems } from "../utilis/cartSlice";
         {items.map((item) => (
           <div
             key={item.card.info.id}
-            className="p-2 m-6 border-b-2 text-left flex justify-between "
+            className="p-2 m-6 border-gray-200 border-b-2 text-left flex justify-between "
           >
             <div className="w-8/12">
               <div className="py-2 font-semibold">
@@ -24,7 +24,7 @@ import { addItems } from "../utilis/cartSlice";
                   - ₹
                   {item.card.info.price
                     ? item.card.info.price / 100
-                    : item.card.info.defaultPrice / 100}
+                    : item.card.info.defaultPrice / 100} 
                 </span>
               </div>
               <p className="text-xs text-gray-500">{item.card.info.description}</p>

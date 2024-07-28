@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 import useOnline from "../utilis/useOnline";
 const LabelCard=withLabel(RestaurantCard);
-console.log(LabelCard);
+//console.log(LabelCard);
 
 
 
@@ -22,7 +22,9 @@ const Body = () => {
 
   const fetchData = async () => {
     const data = await fetch(CARD_LIST_API);
+    //console.log(data);
     const json = await data.json();
+    console.log(json);
 
 
     setListOfRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -30,7 +32,7 @@ const Body = () => {
 
 
   }
-  console.log(listOfRestaurants);
+  //console.log(listOfRestaurants);
   //console.log(listOfRestaurants);
   //console.log(listOfRestaurants[0].info.aggregatedDiscountInfoV3?.header);
     
@@ -105,7 +107,7 @@ const Body = () => {
         </div>
       </div>
     </div>
-  );
-};
+   );
+ };
 
 export default Body;
