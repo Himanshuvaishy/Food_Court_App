@@ -1,6 +1,6 @@
 
 import { CDN_URL } from "../utilis/constants";
-import Shimmer from "./Shimmer";
+
 const RestaurantCard = ({info}) => {
  // console.log(info);
 //  if (!info) {
