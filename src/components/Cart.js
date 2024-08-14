@@ -16,8 +16,8 @@ const Cart = () => {
            
 
             <div className="w-8/12 ml-auto mr-auto">
-                <button className="p-2  bg-black text-white rounded" onClick={handleClearCart}>Clear Cart</button>
-                {cartItems.length===0 &&<h1 className="flex items-center justify-center font-bold mt-9">Your Cart Is Empty.Add Items To The Cart...🤞💕</h1>}
+                <button className="p-2  bg-black text-white rounded  ml-8 mt-4" onClick={handleClearCart}>Clear Cart</button>
+                {cartItems.length===0 &&<h1 className="flex items-center justify-center font-bold mt-9 ">Your Cart Is Empty Add Items To The Cart...🤞💕</h1>}
 
                 <ItemList items={cartItems} />
                 {/* {cartItems.map((menu,index)=>{return<CartList key={menu.id} index={index}info={menu} />})} */}

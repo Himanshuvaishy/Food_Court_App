@@ -10,7 +10,7 @@ import useOnline from "../utilis/useOnline";
 
    // subscribing to the store using a selector
    
-   // if we use carry bracket then we need to return explicitly 
+   // if we use carrly  bracket then we need to return explicitly 
    const cartItems = useSelector((store)=>{  
      return store.cart.items})
     console.log(cartItems);
@@ -37,6 +37,7 @@ import useOnline from "../utilis/useOnline";
 
             <li>status:{isOnline?"💚":"💖"}</li>
             <li><Link className="link" to="/cart"><i className="fa-solid fa-cart-shopping"></i><sup className="bg-[#681a7e] rounded-full text-white px-1">{cartItems.length}</sup></Link></li>
+           
             <button className="login italic font-bold " onClick={()=>{if(btn==="login") { setBtn("Himanshu")}else if(btn==="Himanshu"){setBtn("logOut")}else if(btn==="logOut"){setBtn("login")}
           }}>{btn}</button>
           </ul>

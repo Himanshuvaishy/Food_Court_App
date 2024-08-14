@@ -8,6 +8,7 @@ import { addItems } from "../utilis/cartSlice";
 
    const handleAddItems = (item)=> {
     dispatch(addItems(item));
+    console.log(dispatch(addItems(item)));
    }
 
     return (
@@ -29,13 +30,15 @@ import { addItems } from "../utilis/cartSlice";
               </div>
               <p className="text-xs text-gray-500">{item.card.info.description}</p>
             </div>
+          
             <div className="w-4/12 p-4 ">
               <div className="absolute ">
                 <button className="p-2 mx-16 mt-[137px] rounded-lg bg-black bg-opacity-75 text-white shadow-lg hover:bg-white  hover:text-black transition-all duration-[.3s]" onClick={ ()=>handleAddItems(item)}>
                   Add +
                 </button>
-              </div>
-              <img src={CDN_URL + item.card.info.imageId}alt={item.card.info.name} className="w-full rounded-md  h-40 " />
+                </div>
+              
+               <img src={CDN_URL + item.card.info.imageId}alt={item.card.info.name} className="w-full rounded-md  h-40 " />
             </div>
           </div>
         ))}

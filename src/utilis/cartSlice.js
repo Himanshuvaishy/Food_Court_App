@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit"
 
-const cartSlice =createSlice(
+const cartSlice =createSlice( 
     {
 
         name:'cart',
@@ -10,6 +10,7 @@ const cartSlice =createSlice(
         reducers : {
             addItems:(state,action)=>{
                 state.items.push(action.payload);
+                
             }, 
             removeItem:(state,action)=>{
                 // state.items.pop();
@@ -34,5 +35,7 @@ const cartSlice =createSlice(
 )
 
 export const { addItems,removeItems,clearCart}=cartSlice.actions;
+console.log(cartSlice.actions);
+console.log(cartSlice.reducer);
 const cartReducer = cartSlice.reducer
 export default  cartReducer; 
