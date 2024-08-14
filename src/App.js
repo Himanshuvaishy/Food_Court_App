@@ -12,6 +12,9 @@ import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
 import RestaurantMenu from "./components/RestaurantMenu";
 import appStore from "./utilis/appStore";
 import Cart from "./components/Cart";
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
+
 
 const About=lazy(()=> import("./components/About"));
 
