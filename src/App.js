@@ -16,6 +16,7 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 
 
+
 const About=lazy(()=> import("./components/About"));
 
 const AppLayout = () => {
